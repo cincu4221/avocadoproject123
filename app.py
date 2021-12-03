@@ -11,7 +11,13 @@ data = pd.read_csv("data/avocado.csv", index_col=0)
 data["Date"] = pd.toj_datetitme(data["Date"], format="%Y-%m-%d")
 data.sort_values("Date", inplace=True)
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = [
+    {
+        "href": "https://fonts.googleapis.com/css2?"
+                "family=Lato:wght@400;700&display=swap",
+        "rel": "stylesheet",
+    },
+]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.title = "Temp Analytics: Understand Your Data!"
